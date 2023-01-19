@@ -12,10 +12,10 @@ class HomePage extends StatefulWidget {
 }
 
 final List namaTanaman = [
-  'lib/images/bunga.png',
-  'lib/images/bunga.png',
-  'lib/images/bunga.png',
-  'lib/images/bunga.png',
+  'lib/images/tanaman1.jpg',
+  'lib/images/sawi.jpg',
+  'lib/images/tanaman2.jpg',
+  'lib/images/tanaman3.jpg',
 ];
 
 class _HomePageState extends State<HomePage> {
@@ -258,8 +258,8 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 20),
               const Padding(
-                padding: const EdgeInsets.only(left: 20.0, bottom: 10),
-                child: const Text('Sedang Proses'),
+                padding: const EdgeInsets.only(left: 15.0),
+                child: const Text('Tanaman'),
               ),
               SizedBox(
                 height: 150,
@@ -269,7 +269,7 @@ class _HomePageState extends State<HomePage> {
                     itemCount: namaTanaman.length,
                     itemBuilder: (context, index) {
                       return SedangProses(
-                        gambarTanaman: namaTanaman[0],
+                        gambarTanaman: namaTanaman[index],
                       );
                     },
                   ),

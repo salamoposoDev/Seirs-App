@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seirs_app/pages/history_page.dart';
 import 'package:seirs_app/pages/home_page.dart';
+import 'package:seirs_app/pages/plant_sensor_page.dart';
 import 'package:seirs_app/pages/power_page.dart';
 import 'package:seirs_app/pages/setting_page.dart';
 
@@ -22,6 +23,7 @@ class _MainPageState extends State<MainPage> {
   final List<Widget> _pageChildren = [
     const HomePage(),
     const PowerPage(),
+    const PlantSensors(),
     const HistoryPage(),
     const SettingPage(),
   ];
@@ -47,6 +49,10 @@ class _MainPageState extends State<MainPage> {
           const BottomNavigationBarItem(
             icon: Icon(Icons.flash_on),
             label: 'Power',
+          ),
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.sensor_occupied),
+            label: 'Plant',
           ),
           const BottomNavigationBarItem(
             icon: Icon(Icons.sensor_door),
