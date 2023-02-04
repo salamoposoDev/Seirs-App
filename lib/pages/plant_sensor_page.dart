@@ -31,9 +31,32 @@ class _PlantSensorsState extends State<PlantSensors> {
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Container(
               height: 200,
+              width: 400,
               decoration: BoxDecoration(
                 color: Colors.blueGrey[200],
                 borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Suhu Panel'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '30\'C',
+                        style: GoogleFonts.bebasNeue(
+                          fontSize: 50,
+                        ),
+                      ),
+                      Image.asset(
+                        "lib/images/panel.gif",
+                        height: 50,
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),
@@ -49,7 +72,11 @@ class _PlantSensorsState extends State<PlantSensors> {
                 crossAxisCount: 2,
               ),
               itemBuilder: (context, index) {
-                return PlantSensorComp();
+                return PlantSensorComp(
+                  sensorName: 'PPM',
+                  sensorIcon: 'lib/images/220v.png',
+                  sensorValue: '220v',
+                );
               },
             ),
           ),

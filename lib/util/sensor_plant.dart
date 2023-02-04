@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
 class PlantSensorComp extends StatelessWidget {
-  const PlantSensorComp({super.key});
+  String sensorName;
+  String sensorIcon;
+  String sensorValue;
+
+  PlantSensorComp({
+    required this.sensorName,
+    required this.sensorIcon,
+    required this.sensorValue,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +28,11 @@ class PlantSensorComp extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text('PH'),
-                Icon(Icons.grid_3x3),
+                Text(sensorName),
+                Image.asset(sensorIcon),
               ],
             ),
-            Text('Value'),
+            Text(sensorValue),
             Text('Status'),
           ],
         ),

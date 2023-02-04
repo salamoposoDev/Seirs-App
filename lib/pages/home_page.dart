@@ -268,8 +268,10 @@ class _HomePageState extends State<HomePage> {
                     scrollDirection: Axis.horizontal,
                     itemCount: namaTanaman.length,
                     itemBuilder: (context, index) {
-                      return SedangProses(
-                        gambarTanaman: namaTanaman[index],
+                      return Expanded(
+                        child: SedangProses(
+                          gambarTanaman: namaTanaman[index],
+                        ),
                       );
                     },
                   ),
